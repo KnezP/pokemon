@@ -15,21 +15,24 @@ const fetchDataFromPokeAPI = async (pokemonIdentifier) => {
 
 const handlePokeAPIData = (data) => {
     const { name, id, height, weight, stats, sprites } = data;
-
     const pictureDiv = document.getElementById("picture");
+    pictureDiv.innerText = "";
     const img = document.createElement("img");
     img.src = sprites.front_default;
     img.alt = name;
     const capName = name.charAt(0).toUpperCase() + name.slice(1);
     pictureDiv.appendChild(img);
-    document.getElementById("identification").textContent = `${capName} #${id}`;
-    document.getElementById("properties").textContent = `Weight: ${weight} Height: ${height}`;
+    document.getElementById("pokemon-name").textContent = `${capName}\u00A0`;
+    document.getElementById("pokemon-id").textContent = `#${id}`;
+    document.getElementById("weight").textContent = `Weight: ${weight}\u00A0`;
+    document.getElementById("height").textContent = `Height: ${height}`;
     document.getElementById("hp").textContent = stats[0].base_stat;
     document.getElementById("attack").textContent = stats[1].base_stat;
     document.getElementById("defense").textContent = stats[2].base_stat;
     document.getElementById("special-attack").textContent = stats[3].base_stat;
     document.getElementById("special-defense").textContent = stats[4].base_stat;
     document.getElementById("speed").textContent = stats[5].base_stat;
+
 };
 
 const search = () => {

@@ -36,6 +36,10 @@ tr{
 .all{
     height: 230px;
 }
+.properties, .identification{
+    display: flex;
+    flex-direction: row;
+}
 .picture img{
     margin-top: -20px;
     width: 100%;
