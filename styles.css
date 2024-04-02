@@ -34,7 +34,7 @@ tr{
     color:white;
 }
 .all{
-    height: 230px;
+    height: 270px;
 }
 .properties, .identification{
     display: flex;
@@ -43,5 +43,9 @@ tr{
 .picture img{
     margin-top: -20px;
     width: 100%;
-    height: 180%;
+    height: 80%;
+    object-fit: contain;
+}
+#types {
+    margin-top: -10px;
 }
